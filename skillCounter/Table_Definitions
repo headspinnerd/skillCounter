@@ -1,0 +1,49 @@
+CREATE TABLE `button` (
+`username` varchar(20) NOT NULL,
+`skillname` varchar(30) NOT NULL,
+`btnNum` int(1) NOT NULL,
+`btn1Name` varchar(10) NOT NULL,
+`btn1TextColor` varchar(7) NOT NULL,
+`btn1BkColor` varchar(7) NOT NULL,
+`btn2Name` varchar(10) DEFAULT NULL,
+`btn2TextColor` varchar(7) DEFAULT NULL,
+`btn2BkColor` varchar(7) DEFAULT NULL,
+`btn3Name` varchar(10) DEFAULT NULL,
+`btn3TextColor` varchar(7) DEFAULT NULL,
+`btn3BkColor` varchar(7) DEFAULT NULL,
+`btn4Name` varchar(10) DEFAULT NULL,
+`btn4TextColor` varchar(7) DEFAULT NULL,
+`btn4BkColor` varchar(7) DEFAULT NULL,
+`btn5Name` varchar(10) DEFAULT NULL,
+`btn5TextColor` varchar(7) DEFAULT NULL,
+`btn5BkColor` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `serverInfo` (
+`info1` varchar(100) NOT NULL,
+`info2` varchar(100) NOT NULL,
+`info3` varchar(100) NOT NULL,
+`info4` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `skillCounter` (
+`username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+`date` date NOT NULL,
+`skillName` char(30) COLLATE utf8_unicode_ci NOT NULL,
+`first_count` smallint(3) NOT NULL DEFAULT '0',
+`second_count` smallint(3) NOT NULL DEFAULT '0',
+`third_count` smallint(3) NOT NULL DEFAULT '0',
+`fourth_count` smallint(3) NOT NULL DEFAULT '0',
+`fifth_count` smallint(3) NOT NULL DEFAULT '0',
+`comment` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+`update_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE `userInfo` (
+`username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+`password` text COLLATE utf8_unicode_ci NOT NULL,
+`email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+`name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+`registerDate` date NOT NULL,
+`lastLoginDate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
